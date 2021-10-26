@@ -15,7 +15,7 @@ export default class Users extends Component {
         fetch('https://kekambas-bs.herokuapp.com/kekambas')
         .then(res => res.json())
         .then(data => this.setSteate({
-            users: data.id[19].first_name
+            users: data.id[19].first_name,
             users: data.id[19].last_name
         }))
     }
@@ -25,7 +25,7 @@ export default class Users extends Component {
         return (
             <div>
                 adslfhaohfislfhkashkvnds
-                {this,state.users.map((u,i) => <UserInfo key={i} user = {u}  />)}
+                {this.state.users.map((u,i) => <UserInfo key={i} user = {u}  />)}
             </div>
         )
     }
